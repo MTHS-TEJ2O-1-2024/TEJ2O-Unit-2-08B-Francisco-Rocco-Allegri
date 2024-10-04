@@ -1,8 +1,36 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: Francisco
+ * Created on: Oct 2024
+ * This program switches an RGB LED's colors
 */
 
-basic.showString('Hello, World!')
+basic.clearScreen()
+pins.digitalWritePin(DigitalPin.P15, 0)
+pins.digitalWritePin(DigitalPin.P14, 0)
+pins.digitalWritePin(DigitalPin.P13, 0)
+basic.showIcon(IconNames.Happy)
+
+input.onButtonPressed(Button.A, function () {
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    basic.showString("Red")
+    pins.digitalWritePin(DigitalPin.P15, 0)
+
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    basic.showString("Blue")
+    basic.clearScreen()
+    pins.digitalWritePin(DigitalPin.P14, 0)
+
+    pins.digitalWritePin(DigitalPin.P13, 1)
+    basic.showString("Green")
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    basic.clearScreen()
+
+    pins.digitalWritePin(DigitalPin.P15, 1)
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    basic.showString("Red")
+    pins.digitalWritePin(DigitalPin.P15, 0)
+    pins.digitalWritePin(DigitalPin.P14, 0)
+    basic.clearScreen()
+
+})
