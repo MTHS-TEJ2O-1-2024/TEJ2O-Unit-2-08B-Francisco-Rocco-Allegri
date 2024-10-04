@@ -5,32 +5,32 @@
  * This program switches an RGB LED's colors
 */
 
-//Sets Pins info and then shows a happy face
+// Sets Pins info and then shows a happy face
 basic.clearScreen()
 pins.digitalWritePin(DigitalPin.P15, 0)
 pins.digitalWritePin(DigitalPin.P14, 0)
 pins.digitalWritePin(DigitalPin.P13, 0)
 basic.showIcon(IconNames.Happy)
 
-//Begins by turning the LED Red
+// Begins by turning the LED Red
 input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(DigitalPin.P15, 1)
     basic.showString("Blue")
     pins.digitalWritePin(DigitalPin.P15, 0)
 
-//Turns LED Green
+    // Turns LED Green
     pins.digitalWritePin(DigitalPin.P14, 1)
     basic.showString("Green")
     basic.clearScreen()
     pins.digitalWritePin(DigitalPin.P14, 0)
 
-//Turns LED red
+    // Turns LED red
     pins.digitalWritePin(DigitalPin.P13, 1)
     basic.showString("Red")
     pins.digitalWritePin(DigitalPin.P13, 0)
     basic.clearScreen()
 
-//Turns LED Cyan
+    // Turns LED Cyan
     pins.digitalWritePin(DigitalPin.P15, 1)
     pins.digitalWritePin(DigitalPin.P14, 1)
     basic.showString("Cyan")
@@ -38,7 +38,7 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(DigitalPin.P14, 0)
     basic.clearScreen()
 
-//Turns LED Yellow
+    // Turns LED Yellow
     pins.digitalWritePin(DigitalPin.P14, 1)
     pins.digitalWritePin(DigitalPin.P13, 1)
     basic.showString("Yellow")
@@ -46,7 +46,7 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(DigitalPin.P13, 0)
     basic.clearScreen()
 
-//Turns LED Magenta
+    // Turns LED Magenta
     pins.digitalWritePin(DigitalPin.P15, 1)
     pins.digitalWritePin(DigitalPin.P13, 1)
     basic.showString("Magenta")
@@ -54,7 +54,7 @@ input.onButtonPressed(Button.A, function () {
     pins.digitalWritePin(DigitalPin.P13, 0)
     basic.clearScreen()
 
-//Turn LED White
+    // Turn LED White
     pins.digitalWritePin(DigitalPin.P15, 1)
     pins.digitalWritePin(DigitalPin.P14, 1)
     pins.digitalWritePin(DigitalPin.P13, 1)
@@ -65,7 +65,7 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
 
 
-//Ends of by showing a happy face
+// Ends of by showing a happy face
 
     basic.showIcon(IconNames.Happy)
 
